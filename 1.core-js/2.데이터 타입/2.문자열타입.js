@@ -37,4 +37,5 @@ var day = 25;
 var anni = '크리스마스';
 
 console.log(month + '월 ' + day + '일은 ' + anni + '입니다.');
+// #{}는 ``안에서만 가능!
 console.log(`${month}월 ${day}일은 ${anni}입니다.`);
