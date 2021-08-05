@@ -16,7 +16,7 @@ var number = +prompt('정수를 입력해주세요 :)');
 if (number === 0 ){ 
     alert(`입력하신 숫자는 0입니다`);
 }
-else if (number % 7 -== 0) {
+else if (number % 7 === 0) {
     alert(`입력하신 숫자는 7의 배수 입니다 :)`);
 } 
 else {
