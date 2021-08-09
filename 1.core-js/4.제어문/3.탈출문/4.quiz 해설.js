@@ -9,7 +9,7 @@ while (true) {
 var first = Math.floor(Math.random() * 50) +1;
 var second = Math.floor(Math.random() * 50) +1;
 
-//랜덤 연산자 생성을 위한 3가지 랜덤 정수
+//랜덤 연산자 생성을 위한 3가지 랜덤 정수//0,1,2 
 var operatorNum = Math.floor(Math.random() *3);
 
 //연산자 기호를 저장할 변수
