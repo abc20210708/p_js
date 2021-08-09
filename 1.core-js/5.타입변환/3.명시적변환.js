@@ -1,0 +1,27 @@
+
+
+//명시적 문자열 변환
+var a = 10, b = 20;
+// var result = String(a) + String(b);
+// var result = a.toString() + b.toString();
+var result = '' + a + b;
+console.log(`result:${result}`);
+
+//명시적 숫자 변환
+console.log('===================');
+
+var m = '100', n = '5.11';
+// var result2 = Number(m) + Number(n) ;
+// var result2 = parseFloat(m) + parseFloat (n);
+var result2 = (+m)+ (+n);
+console.log(`result2:${result2}`);
+
+//명시적 논리 변환
+console.log('==================');
+//논리용도로 쓰여질 때 false
+var ex1 = Boolean(undefined);
+console.log(ex1);
+//!:논리 부정 연산자(NOT)
+//!:논리판단 용도,!!:원상복구
+var ex2 = !!'메롱';
+console.log(ex2);

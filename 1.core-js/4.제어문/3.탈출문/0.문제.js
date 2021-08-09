@@ -1,8 +1,11 @@
-//  var i = 3;
+ 
+ 
+ 
+ var i = 3;
 
-// while (i) {
-//     alert ( i-- );
-// }
+while (i) {
+    alert ( i-- );
+}
 
 // var i = 0;
 // while (++i < 5) alert ( i );//alert('메롱');//;이후 독립
