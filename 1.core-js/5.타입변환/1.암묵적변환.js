@@ -7,6 +7,7 @@ var num = 200;
 var numStr = 200 + ''; // '200'
 
 var logic = '' + true;
+console.log(logic);
 
 var ex2 = 100 - '30';
 console.log(ex2);

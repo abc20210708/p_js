@@ -16,9 +16,16 @@ var total = 0;
 
 // total += scores [0];
 
-for (var i = 0; i < scores.length; i++) {
-    total += scores[i];
+// for (var i = 0; i < scores.length; i++) {
+//     total += scores[i];
+// }
+
+var i = 0;
+for (var s of scores) {
+  total += s;
+  
 }
+
 console.log(`총점: ${total}점`);
 
 var avg = total / scores.length;

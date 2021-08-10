@@ -18,8 +18,9 @@ if (NaN) console.log('ok8');
 console.log('==================');
 
 var num = 10;
-if (!(num % 2()) {
+if (!(num % 2)) {
     console.log('짝수입니다.');
 } else {
     console.log('홀수입니다.');
 }
+
