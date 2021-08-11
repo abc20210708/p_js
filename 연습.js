@@ -1,36 +1,14 @@
-//게임 데이터
-var min = 1; // 정답 최소값
-var max = 100; // 정답 최대값
-//실제 정답 (랜덤 숫자)
-var secret = Math.floor(Math.random() * 100) + 1;
+var foods = ['김말이', '닭꼬치', '어묵', '떡볶이'];
+var arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+console.log('============================');
+ 
+var arr1 = [10, 20, 30];
+var arr2 = [500, 300, 100];
 
-//횟수 제한 변수
-var countDown = 6;
+var concatArr = arr2.concat(arr1, foods);
+console.log(concatArr);
 
-alert(`[UP & DOWN 게임 1 ~ 100사이의 숫자를 맞춰보세요]`);
-
-while (true) {
-    // 사용자가 입력한 숫자
-    var userAnswer = +prompt(`숫자를 입력하세요! [${min}~${max}]`);
-
-    countDown--; 
-
-    // 입력값 검증
-    if (secret === userAnswer) {
-        alert(`정답입니다!`);
-        break;
-    } else if (secret > userAnswer) {
-        alert('UP!!');
-        min = userAnswer;
-    } else {
-        alert('DOWN!!');
-        max = userAnswer;
-    }
-
-    if (countDown <= 0) {
-        alert(`응 너 졌어~~ 정답은 ${secret}이야~~`);
-        break;
-    } else {
-        alert(`${countDown}번의 기회가 남았습니다.`);
-    }
-}
+console.log('============================');
+//includes() : 배열의 특성 요소가 있는지 확인
+var result = foods.includes('어묵');
+console.log(result);
