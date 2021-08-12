@@ -1,14 +1,44 @@
-var foods = ['김말이', '닭꼬치', '어묵', '떡볶이'];
-var arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-console.log('============================');
- 
-var arr1 = [10, 20, 30];
-var arr2 = [500, 300, 100];
+var articles = {
 
-var concatArr = arr2.concat(arr1, foods);
-console.log(concatArr);
+        totalCount: 3670,//총 게시물 수
+        admin: '김말똥', //관리자 이름
+        pageNumber: 11, //페이지 넘버
+        articleList: [ //게시물 데이터,순차적,배열
+
+            {
+                bno: 5, //글번호
+                title: '뽀로로랜드',
+                write: '김뽀로로',
+                content: '안녕',
+                viewCount: 0,
+                regDate:'2021-08-11' 
+            },
+
+            {
+                bno: 4, //글번호
+                title: '메롱메롱',
+                write: '박뽀로로',
+                content: '메롱',
+                viewCount: 5,
+                regDate:'2021-08-11'
+            },
+
+            { 
+                bno: 3, //글번호
+                title: '안녕안녕',
+                write: '김철수',
+                content: '잘있어',
+                viewCount: 0,
+                regDate:'2021-08-11'}
+            
+        ]
+};
+
+console.log(articles.admin);
 
 console.log('============================');
-//includes() : 배열의 특성 요소가 있는지 확인
-var result = foods.includes('어묵');
-console.log(result);
+console.log(articles.articleList[1]);
+console.log(articles.articleList[2].title);
+console.log(articles.articleList[0]['write']);
+console.log(articles.articleList[0].write);
+console.log(articles.articleList[1].bno);
