@@ -88,6 +88,6 @@ console.log(add(10,20));
 //변수이름이 함수이름
 var sub = function(n1,n2) {
     return n1 - n2;
-};
+};//값
 
 console.log(sub(20,10));
