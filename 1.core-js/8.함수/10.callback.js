@@ -66,3 +66,28 @@ sayHello(function() {console.log('바나나우유 맛있음');});
 // 예) 브라우저 버튼들
 //클릭해서 일이 일어나야 함
 //일어나는 일은 사용자가 정해서 쓰는
+
+console.log('===========');
+/*
+    숫자 배열을 전달함녀 해당 배열을
+    조건부로 필터링해서 복사배열을
+    리턴하는 함수
+    ex) [1,2,3...,100] 배열을 함수에 전달 -> 짝수 조건을 
+    걸면 [2,4,6,8,...98,100] 이 리턴
+*/
+function filter (array, condition) {
+    //필터링이 끝난 배열
+    var filteredArray = [];
+    for (var n of array) {
+        if (condition(n)) {
+            filteredArray.push(n);
+        }
+    }
+    return filteredArray;
+}
+
+
+var arr = [1,2,3,4,5,6,7,8,9,10];
+
+var newArr = filter(arr, n=>n % 2 === 0);
+console.log(newArr);

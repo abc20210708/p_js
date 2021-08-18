@@ -1,38 +1,23 @@
-for (var k = 0; k < 3; k++) {
-    console.log('안녕' + k++);
-}
-console.log('=======');
-for (var k = 0; k < 3; k++) {
-    console.log('안녕' + ++k);
-}
-console.log('=======');
-for (var k = 0; k < 3; k++) {
-    console.log('안녕' + k);
-}
-console.log('=======');
 
 
+//콜백 함수
 
-console.log('=======');
-for (var i = 0; i < 10; i++) {
-    console.log(i);
-    if (i === 5){
-        break;
+function showNumbers(n, code) {
+    for (var i = 1; i <= n; i++) {
+        if (code(i)) {
+            console.log(i);
+        }
     }
 }
 
-console.log('=======');
-for (var i=0; i < 10; i++) {
-    if(i === 5) {
-        break;//if(i === 5) break;
-    }
-    console.log(i);  
+showNumbers(10, function (n){
+    return n % 3 === 0;
+});
+
+function sayHello (callback) {
+    console.log('안녕하세요');
+    callback('편의점 전용');
 }
 
-console.log('=======');
-for (var i=0; i < 10; i++) {
-    if(i === 5) {
-        console.log(i);
-        break;//if(i === 5) break;
-    }   
-}
+
+sayHello((a) => console.log(a +'바나나 우유 주세욥'));
