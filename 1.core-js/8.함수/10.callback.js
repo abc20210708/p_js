@@ -57,12 +57,15 @@ console.log('===========');
 
 function sayHello (callback) {
     console.log('안녕하세요~!');
-    callback(/*'맛없는'*/);
+    callback('맛없는');
 }
 
-sayHello(function() {console.log('바나나우유 맛있음');});
+//sayHello(function() {console.log('바나나우유 맛있음');});
 //sayHello((msg) => console.log(msg + '바나나우유 주세요'));
 
+function sayHello(msg) {
+    console.log(msg + '바나나우윳주셋욧');
+}
 // 예) 브라우저 버튼들
 //클릭해서 일이 일어나야 함
 //일어나는 일은 사용자가 정해서 쓰는

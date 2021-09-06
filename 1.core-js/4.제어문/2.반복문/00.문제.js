@@ -10,8 +10,8 @@
 //0은 false
 
 // 2.
-let i = 0;
-while (++i < 5) alert ( i );
+////let i = 0;
+//while (++i < 5) alert ( i );
 
 // 3.
 // let i = 0;
@@ -52,3 +52,22 @@ while (++i < 5) alert ( i );
 
 // 주의:작성한 코드는 임의의 숫자 n에
 // 대해 동작해야 합니다.
+
+
+// 방법1
+
+function isPrime(num) {
+    // 소수는 1과 자기 자신만으로만 나누어 떨어지는 수 임으로
+    // num > i
+    for(let i = 2; i < num; i++) {
+    if(num % i === 0) { //이 부분에서 num이  다른 수로 나눠떨어진다면 소수가 아님
+      return false;
+     }
+    }
+   // 소수는 1보다 큰 정수임으로
+   // 1보다 작으면 false를 리턴한다
+   return num > 1;
+  }
+
+ var result = isPrime(-4);
+ console.log(result);

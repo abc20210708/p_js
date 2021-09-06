@@ -1,23 +1,11 @@
 
-
-//콜백 함수
-
-function showNumbers(n, code) {
-    for (var i = 1; i <= n; i++) {
-        if (code(i)) {
-            console.log(i);
-        }
+let num = 3;
+for(let i = 2; i < num ; i++) {
+    if (num % i === 0) {
+        console.log('소수가 아님');
     }
+    else if(num < 55) {
+        break;
+    }
+    num++;
 }
-
-showNumbers(10, function (n){
-    return n % 3 === 0;
-});
-
-function sayHello (callback) {
-    console.log('안녕하세요');
-    callback('편의점 전용');
-}
-
-
-sayHello((a) => console.log(a +'바나나 우유 주세욥'));
