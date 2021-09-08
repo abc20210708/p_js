@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <ul id="fruits">
+        <li>사과</li>
+        <li>바나나</li>
+        <li>포도</li>
+    </ul>
+
+    <script>
+        const $fruits = document.
+        getElementById('fruits');
+
+        /*
+        const $children = [...$fruits.children];
+        
+        const $apple = $children[0];
+        const $banana = $children[1];
+        const $grape = $children[2];
+        */
+
+        //배열 드스트럭쳐링(ES6+)
+        const [$apple, $banana, $grape] = [...$fruits.children];
+
+        const $mango = document.createElement('li');
+        $mango.textContent = '망고';
+        $fruits.appendChild($mango);
+        
+        //노드 이동
+        $fruits.appendChild($banana);
+
+        //사과가 망고 앞으로 이동함!
+        $fruits.insertBefore($apple, $mango);
+
+        //사과 망고 포도 바나나
+        //포도를 맨 마지막 바로 앞으로
+        $fruits.insertBefore($grape, 
+        $fruits.lastElementChild);
+        
+    </script>
+
+</body>
+</html>
