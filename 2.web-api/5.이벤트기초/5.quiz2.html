@@ -8,9 +8,17 @@
 </head>
 
         <style>
-        .hide {
-            display: none;
-        }
+            .menu ul {
+                display: none;
+            }
+
+            .menu.open ul {
+                display: block;
+            }
+
+            .menu .title {
+                cursor: pointer;
+            }
         </style>
 <body>
     
@@ -28,13 +36,13 @@
     </div>
 
     <script>
-        const $title = document.querySelector('.title');
+        
+    const $lunches = document.getElementById('lunches');
+    const $title = $lunches.querySelector('.title');
 
-       const $list = [...$title.children];
-
-       $list.textContent = '';
-
-      
+    $title.addEventListener('click', function () {
+        $lunches.classList.toggle('open');
+    });
 
 
 
