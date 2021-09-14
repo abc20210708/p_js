@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예산작성하기</title>
+    <!-- reset css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="./main_hsj.css">
+</head>
+
+<body>
+    <section class="budget-list">
+        <h1 class="title">이번달 예산💸 (단위 :원)</h1>
+        <div class="content">
+            <form class="budget-insert">
+                내역명
+                <input type="text" id="budget" placeholder="내역명을 입력하세요">
+            <form class="budget-insert">
+               금액
+                <input type="text" id="money" placeholder="금액을 입력하세요">    
+                <!-- 총 예산 작성 완료 버튼 -->
+                <button class="finish"><i class="fas fa-check-circle"></i></button>
+                
+                <!-- 총 예산 다시 작성 버튼 -->
+                <button class="return"><i class="fas fa-undo-alt"></i></button>
+                
+            </form>
+            <ul id="list">
+                <!-- 예산 내역 리스트 -->
+                <li class="list-item">
+                    예산 <em><span>100,000,000 원</span></em><p>
+                    <!-- 수정 버튼 -->
+                    <div class="modify"><i class="fas fa-undo-alt"></i></div> 
+                    <!-- 삭제 버튼 -->
+                    <div class="remove"><i class="fas fa-minus-circle"></i></div>
+                </li>
+            </ul>
+            
+            <!-- sum(.list-amount) -->
+            <div>총 예상 지출 <em id="sum"></em> </div>
+            <!-- 예산금액 - sum(.list-amount) -->
+            <div>남은 금액 <em id="remain"></em> </div>
+        </div>
+    </section>
+    </body>
+    </html>
