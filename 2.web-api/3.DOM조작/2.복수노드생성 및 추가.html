@@ -11,7 +11,9 @@
     <ul id="fruits"></ul>
 
     <script>
-        const fruitList = ['사과', '오렌지', '포도', '자몽', '귤', '라임', '딸기', '바나나', '파인애플', '깔라만시'];
+        const fruitList = ['사과', '오렌지', '포도', '자몽',
+         '귤', '라임', '딸기', '바나나', '파인애플',
+          '깔라만시'];
 
         //선택된 과일 리스트
         const selection = [];
@@ -20,7 +22,8 @@
 
         while (selection.length < 5) {
             const $li = document.createElement('li');
-            const rn = Math.floor(Math.random() * fruitList.length);
+            const rn = Math.floor(Math.random() 
+                            * fruitList.length);
             
             if (!selection.includes(fruitList[rn])) {
                 selection.push(fruitList[rn]);

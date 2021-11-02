@@ -17,7 +17,8 @@
         const $btn = document.getElementById('btn');
         const $btn2 = document.getElementById('btn2');
         */
-        const [$btn, $btn2, $btn3] = [...document.querySelectorAll('button[id^="btn"]')];
+        const [$btn, $btn2, $btn3]
+         = [...document.querySelectorAll('button[id^="btn"]')];
 
         function sayHello() {
             alert('안녕하세요:)');

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예산작성하기HSJ</title>
+    <!-- reset css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="./main_hsj.css">
+
+    <!-- custom js -->
+    <script src="./app_hsj.js" defer></script>
+</head>
+
+<body>
+    <section class="budget-list">
+        <h1 class="title">이번달 예산💸 (단위: 원)</h1>
+        <div class="content">
+            <form class="budget-insert">
+                <div class="text">나의 예산</div>
+                <span class="text">1000000원</span>
+                
+                <!-- <input type="text" id="budget" placeholder="숫자만 입력하세요"> -->
+                
+                <!-- 작성 완료 버튼 -->
+                <!-- <button class="insert-bt"><i class="fas fa-check-circle"></i></button> -->
+
+                <!-- 총 예산 다시 작성 버튼 -->
+                <button class="edit-bt"><i class="fas fa-pen"></i></button>
+
+            </form>
+            <ul id="list">
+                <!-- 예산 내역 리스트 -->
+                <li data-id=1 class="list-item">
+                    <div class="li-text">식비</div>
+                    <div class="li-money">-100000</div>
+
+                    <!-- 수정 버튼 -->
+                    <button class="modify-bt"><i class="fas fa-undo-alt"></i></button>
+                    <!-- 삭제 버튼 -->
+                    <!-- <button class="remove-bt"><i class="fas fa-minus-circle"></i></button> -->
+                </li>
+                <li data-id=2 class="list-item">
+                    <div class="li-text">통신비</div>
+                    <div class="li-money">-70000</div>
+
+                    <!-- 수정 버튼 -->
+                    <button class="modify-bt"><i class="fas fa-undo-alt"></i></button>
+                    <!-- 삭제 버튼 -->
+                    <!-- <button class="remove-bt"><i class="fas fa-minus-circle"></i></button> -->
+                </li>
+            </ul>
+            <form class="list-item-insert">
+                <div class="text">내역명</div> <input type="text" id="list-name" placeholder="내역을 입력해주세요">
+                <div class="text">금액</div> <input type="text" id="list-cost" placeholder="금역을 입력해주세요">
+                <button id="add"><i class="fas fa-plus-circle"></i></button>
+            </form>
+
+            <!-- sum(.list-amount) -->
+            <div class="text finish">총 예상 지출 <em id="sum">100000</em> </div>
+            <!-- 예산금액 - sum(.list-amount) -->
+            <div class="text finish">남은 금액 <em id="remain"></em> </div>
+        </div>
+    </section>
+</body>
+
+</html>
