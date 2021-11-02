@@ -8,8 +8,14 @@
     <title>Document</title>
 
     <style>
-        .hide {
-            display: none;
+       
+        #fruits {
+            padding: 50px;
+            border: 2px solid red;
+        }
+       
+        #fruits li {
+            background: yellow;
         }
 
     </style>
@@ -18,16 +24,28 @@
 
 <body>
 
-   <button id="hider">텍스트 숨기기!</button>
-
-   <div class="text">우린 거북선!!!다른 배들 통통</div>
+    <input type="text">
+    <p class="msg"></p>
 
     <script>
-    
+       
+        const $input = document.querySelector('input');
+        const $msg = document.querySelector('p');
+
+        $input.addEventListener('keyup', function(e) {
+            console.log(e);
+
+            if(e.key === 'Enter') {
+                $msg.textContent = e.target.value;
+                e.target.value = '';
+            }
+
+        })
+
+
     </script>
 
 
 
 </body>
-
 </html>
